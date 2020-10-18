@@ -38,7 +38,7 @@ jobs:
         mkdir -p /opt/images/
     - name: Build Firmware
       env:
-        TNAME: K2P-5.0
+        TNAME: K2P_nano-5.0
       run: |
         cd /opt/rt-n56u/trunk
         if [ ! -f configs/templates/$TNAME.config ] ; then
@@ -67,6 +67,20 @@ jobs:
         #以下选项是定义你需要的功能（y=集成,n=忽略），重新写入到.config文件
         ######################################################################
         echo "CONFIG_FIRMWARE_INCLUDE_MENTOHUST=n" >> .config #MENTOHUST
+        echo "CONFIG_FIRMWARE_INCLUDE_SFE=n" >> .config #SFE
+        echo "CONFIG_FIRMWARE_INCLUDE_SMBD36=n" >> .config #SMBD36
+        echo "CONFIG_FIRMWARE_INCLUDE_XUPNPD=n" >> .config #XUPNPD
+        echo "CONFIG_FIRMWARE_INCLUDE_VLMCSD=n" >> .config #VLMCSD
+        echo "CONFIG_FIRMWARE_INCLUDE_TTYD=n" >> .config #TTYD
+        echo "CONFIG_FIRMWARE_INCLUDE_HTOP=n" >> .config #HTOP
+        echo "CONFIG_FIRMWARE_INCLUDE_IPERF3=n" >> .config #IPERF3
+        echo "CONFIG_FIRMWARE_INCLUDE_MTR=n" >> .config #MTR
+        echo "CONFIG_FIRMWARE_INCLUDE_SOCAT=n" >> .config #SOCAT
+        echo "CONFIG_FIRMWARE_INCLUDE_SRELAY=n" >> .config #SRELAY
+        echo "CONFIG_FIRMWARE_INCLUDE_NANO=n" >> .config #NANO
+        echo "CONFIG_FIRMWARE_INCLUDE_CURL=n" >> .config #CURL
+        echo "CONFIG_FIRMWARE_INCLUDE_NAPT66=n" >> .config #NAPT66
+        echo "CONFIG_FIRMWARE_INCLUDE_FFMPEG_NEW=n" >> .config #FFMPEG_NEW
         echo "CONFIG_FIRMWARE_INCLUDE_SCUTCLIENT=n" >> .config #SCUTCLIENT
         echo "CONFIG_FIRMWARE_INCLUDE_SHADOWSOCKS=y" >> .config #SS plus+
         echo "CONFIG_FIRMWARE_INCLUDE_SSOBFS=n" >> .config # simple-obfs混淆插件
