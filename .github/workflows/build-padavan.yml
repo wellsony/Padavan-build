@@ -51,7 +51,6 @@ jobs:
         #因不同型号配置功能不一样，所以先把配置项删除，如果你自己要添加其他的，也要写上删除这一条，切记！！！
         ################################################################################################
         sed -i '/CONFIG_FIRMWARE_INCLUDE_MENTOHUST/d' .config #删除配置项MENTOHUST
-        sed -i '/CONFIG_FIRMWARE_INCLUDE_CURL/d' .config #删除配置项CURL
         sed -i '/CONFIG_FIRMWARE_INCLUDE_SCUTCLIENT/d' .config #删除配置项SCUTCLIENT
         sed -i '/CONFIG_FIRMWARE_INCLUDE_SHADOWSOCKS/d' .config #删除配置项SS plus+
         sed -i '/CONFIG_FIRMWARE_INCLUDE_SSSERVER/d' .config #删除配置项SS server
@@ -79,7 +78,6 @@ jobs:
         echo "CONFIG_FIRMWARE_INCLUDE_SOCAT=n" >> .config #SOCAT
         echo "CONFIG_FIRMWARE_INCLUDE_SRELAY=n" >> .config #SRELAY
         echo "CONFIG_FIRMWARE_INCLUDE_NANO=n" >> .config #NANO
-        echo "CONFIG_FIRMWARE_INCLUDE_CURL=y" >> .config #CURL
         echo "CONFIG_FIRMWARE_INCLUDE_NAPT66=n" >> .config #NAPT66
         echo "CONFIG_FIRMWARE_INCLUDE_FFMPEG_NEW=n" >> .config #FFMPEG_NEW
         echo "CONFIG_FIRMWARE_INCLUDE_SCUTCLIENT=n" >> .config #SCUTCLIENT
