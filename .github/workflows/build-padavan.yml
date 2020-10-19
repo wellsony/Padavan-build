@@ -78,7 +78,7 @@ jobs:
         echo "CONFIG_FIRMWARE_INCLUDE_SOCAT=n" >> .config #SOCAT
         echo "CONFIG_FIRMWARE_INCLUDE_SRELAY=n" >> .config #SRELAY
         echo "CONFIG_FIRMWARE_INCLUDE_NANO=n" >> .config #NANO
-        echo "CONFIG_FIRMWARE_INCLUDE_CURL=n" >> .config #CURL
+        echo "CONFIG_FIRMWARE_INCLUDE_CURL=y" >> .config #CURL
         echo "CONFIG_FIRMWARE_INCLUDE_NAPT66=n" >> .config #NAPT66
         echo "CONFIG_FIRMWARE_INCLUDE_FFMPEG_NEW=n" >> .config #FFMPEG_NEW
         echo "CONFIG_FIRMWARE_INCLUDE_SCUTCLIENT=n" >> .config #SCUTCLIENT
